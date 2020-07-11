@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_profile">
+
+    <fragment
+        android:id="@+id/nav_baby_sitters"
+        android:name="com.finalproject.ui.BabySittersFragment"
+        android:label="Babysitters"
+        tools:layout="@layout/fragment_babysitters" />
+
+    <fragment
+        android:id="@+id/nav_nurse"
+        android:name="com.finalproject.ui.NurseFragment"
+        android:label="Nurses"
+        tools:layout="@layout/fragment_nurses" />
+
+    <fragment
+        android:id="@+id/nav_search_babysitter"
+        android:name="com.finalproject.ui.SearchBabysitterFragment"
+        android:label="Search Babysitters"
+        tools:layout="@layout/fragment_search_babysitter" />
+
+    <fragment
+        android:id="@+id/nav_search_nurse"
+        android:name="com.finalproject.ui.SearchNurseFragment"
+        android:label="Search Nurses"
+        tools:layout="@layout/fragment_serach_nurse" />
+
+    <fragment
+        android:id="@+id/nav_hires"
+        android:name="com.finalproject.ui.HiresFragment"
+        android:label="My Hires"
+        tools:layout="@layout/fragment_hires" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.finalproject.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.finalproject.ui.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

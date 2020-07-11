@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#08BDCD</color>
+    <color name="colorPrimaryDark">#24D1E1</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="rating_star_selected">#f63b7f</color>
+    <color name="rating_star">#fcfcfe</color>
+</resources>

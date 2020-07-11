@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_baby_sitters"
+            android:icon="@drawable/ic_baseline_child_care_24"
+            android:title="Babysitters" />
+        <item
+            android:id="@+id/nav_nurse"
+            android:icon="@drawable/ic_baseline_local_pharmacy_24"
+            android:title="Nurses" />
+        <item
+            android:id="@+id/nav_search_babysitter"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="Search Babysitter" />
+        <item
+            android:id="@+id/nav_search_nurse"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="Search Nurse" />
+        <item
+            android:id="@+id/nav_hires"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="My Hires" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="Logout" />
+    </group>
+</menu>

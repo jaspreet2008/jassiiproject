@@ -119,10 +119,10 @@ public class SignUpActivity extends AppCompatActivity {
                     etConfirm.setError("Password does not match !");
                     return;
                 }
-            /*    if (TextUtils.isEmpty(price)) {*/
-            /*        etPrice.setError("");*/
-            /*        return;*/
-            /*    }*/
+                /*    if (TextUtils.isEmpty(price)) {*/
+                /*        etPrice.setError("");*/
+                /*        return;*/
+                /*    }*/
                 if (rdbUser.isChecked()) {
                     userType = "U";
                 } else if (rdbBabySitters.isChecked()) {
@@ -130,11 +130,11 @@ public class SignUpActivity extends AppCompatActivity {
                 } else if (rdbNurse.isChecked()) {
                     userType = "N";
                 }
-                     if(rdbMale.isChecked()){
-                         gender="Male";
-                     }else if(rdbFemale.isChecked()){
-                         gender="Female";
-                     }
+                if(rdbMale.isChecked()){
+                    gender="Male";
+                }else if(rdbFemale.isChecked()){
+                    gender="Female";
+                }
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
@@ -153,7 +153,7 @@ public class SignUpActivity extends AppCompatActivity {
                         } else {
                             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
                             String userId = mDatabase.push().getKey();
-                            User user = new User(userId, name, email, mobile, address, city, userType, password, price,gender);
+                            User user = new User(userId, name, email, mobile, address, city, userType, price,gender);
                             mDatabase.child(Objects.requireNonNull(userId)).setValue(user);
                             progressBar.hide();
                             Toast.makeText(SignUpActivity.this, "User Added Successfully!", Toast.LENGTH_LONG).show();

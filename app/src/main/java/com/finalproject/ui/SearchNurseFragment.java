@@ -8,6 +8,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -66,19 +67,22 @@ public class SearchNurseFragment extends Fragment {
                     public void onDataChange(DataSnapshot snapshot) {
                         userList.clear();
 
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                            User user = dataSnapshot.getValue(User.class);
+                                User user = dataSnapshot.getValue(User.class);
 
-                            if (TextUtils.equals(user.getUserType(), "N") && user.getCity().contains(search))
-                                userList.add(user);
+                                if (TextUtils.equals(user.getUserType(), "N") && user.getCity().contains(search))
+                                    userList.add(user);
 
 
-                        }
+                            }
 
-                        adapter = new UserAdapter(getContext(), userList);
+                            adapter = new UserAdapter(getContext(), userList);
 
-                        recyclerView.setAdapter(adapter);
+                            recyclerView.setAdapter(adapter);
+                            if (userList.size() == 0) {
+                                Toast.makeText(getContext(), "No Nurse found in this area", Toast.LENGTH_LONG).show();
+                            }
 
                     }
 

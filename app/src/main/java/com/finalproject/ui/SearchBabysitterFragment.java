@@ -4,10 +4,12 @@ import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -66,6 +68,7 @@ public class SearchBabysitterFragment extends Fragment {
                     public void onDataChange(DataSnapshot snapshot) {
                         userList.clear();
 
+
                         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
                             User user = dataSnapshot.getValue(User.class);
@@ -79,6 +82,10 @@ public class SearchBabysitterFragment extends Fragment {
                         adapter = new UserAdapter(getContext(), userList);
 
                         recyclerView.setAdapter(adapter);
+                        if (userList.size() == 0) {
+                            Toast.makeText(getContext(), "No Babysitter found in this area", Toast.LENGTH_LONG).show();
+                        }
+
 
                     }
 

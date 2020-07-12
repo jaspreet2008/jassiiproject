@@ -214,15 +214,15 @@ public class ProfileFragment extends Fragment {
 
 
                 if (TextUtils.isEmpty(name)) {
-                    tvName.setError("");
+                    tvName.setError("FIELD EMPTY");
                     return;
                 }
                 if (TextUtils.isEmpty(email)) {
-                    tvEmail.setError("");
+                    tvEmail.setError("FIELD EMPTY");
                     return;
                 }
                 if (mobile.length() != 10) {
-                    tvPhone.setError("");
+                    tvPhone.setError("FIELD EMPTY");
                     return;
                 }
 
